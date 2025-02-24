@@ -1,0 +1,16 @@
+# ignore everything by default
+*
+
+# Allow .gitignore
+!.gitignore
+
+# Allow files inside zebar/starter
+!zebar/
+!zebar/starter/
+!zebar/starter/with-glazewm.html
+!zebar/starter/with-glazewm.zebar.json
+!zebar/starter/styles.css
+
+# Allow glazewm config.yaml
+!glazewm/
+!glazewm/config.yaml
