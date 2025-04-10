@@ -1,16 +1,28 @@
 # ignore everything by default
-*
+# *
 
 # Allow .gitignore
-!.gitignore
+# !.gitignore
 
 # Allow files inside zebar/starter
-!zebar/
-!zebar/starter/
-!zebar/starter/with-glazewm.html
-!zebar/starter/with-glazewm.zebar.json
-!zebar/starter/styles.css
+# !zebar/
+# !zebar/starter/
+# !zebar/starter/with-glazewm.html
+# !zebar/starter/with-glazewm.zebar.json
+# !zebar/starter/styles.css
 
 # Allow glazewm config.yaml
-!glazewm/
-!glazewm/config.yaml
+# !glazewm/
+# !glazewm/config.yaml
+zebar/neobrutal-zebar-1.2.1
+zebar/boilerplate-react-buildless
+zebar/boilerplate-solid-ts
+zebar/starter/with-komorebi.html
+zebar/starter/with-komorebi.zebar.json
+zebar/starter/vanilla.zebar.json
+zebar/starter/vanilla.html
+zebar/tmp*
+zebar/quiet-velvet/node_modules
+zebar/quiet-velvet/dist
+zebar/quiet-velvet/package-lock.json
+
