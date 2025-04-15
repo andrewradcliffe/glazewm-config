@@ -93,6 +93,7 @@ body,
     border-radius: 2px;
     cursor: pointer;
     transition: all 0.3s, transform 0.3s;
+    font-weight: bold;
 
     &.displayed {
         background: rgb(255 255 255 / 15%) !important;
@@ -189,6 +190,7 @@ body,
     border: none;
     cursor: pointer;
     color: var(--font-color);
+    font-weight: bold;
 }
 
 .settings {
