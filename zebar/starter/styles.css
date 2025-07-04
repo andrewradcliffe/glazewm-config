@@ -35,7 +35,7 @@ body,
 #root {
   border-bottom: 1px solid rgb(17 17 27 / 5%);
   /* background: linear-gradient(rgb(0 0 0 / 90%), rgb(5 2 20 / 85%)); */
-  background: #161616;
+  background: rgb(22 22 22 / 75%);
 }
 
 .app {
@@ -84,7 +84,7 @@ body,
 .workspace {
   background: rgb(255 255 255 / 5%);
   margin-right: 4px;
-  padding: 5px 9px;
+  padding: 4px 8px;
   color: rgb(255 255 255 / 90%);
   border: none;
   border-radius: 5px;
@@ -107,9 +107,9 @@ body,
 .paused-button {
   background: rgb(255 255 255 / 15%);
   color: rgb(255 255 255 / 90%);
-  border-radius: 2px;
+  border-radius: 5px;
   /* line-height: 1; */
-  padding: 4px 8px;
+  padding: 3px 7px;
   border: 0;
   cursor: pointer;
   font-weight: bold;
