@@ -85,6 +85,8 @@
 
         // Get icon to show for how much of the battery is charged.
         function getBatteryIcon(batteryOutput) {
+          if (output.battery.isCharging && batteryOutput.chargePercent !== 100)
+            return <i className="ph-fill ph-battery-charging"></i>
           if (batteryOutput.chargePercent > 90)
             return <i class="ph-fill ph-battery-full"></i>;
           if (batteryOutput.chargePercent > 70)
@@ -206,10 +208,6 @@
 
               {output.battery && (
                 <div className="battery">
-                  {/* Show icon for whether battery is charging. */}
-                  {output.battery.isCharging && (
-                    <i className="ph-fill ph-battery-charging"></i>
-                  )}
                   {getBatteryIcon(output.battery)}
                   {Math.round(output.battery.chargePercent)}%
                 </div>

@@ -89,8 +89,8 @@ window_effects:
   # Visual effects to apply to non-focused windows.
   other_windows:
     border:
-      enabled: false
-      color: '#a1a1a1'
+      enabled: true
+      color: '#181825'
     hide_title_bar:
       enabled: false
     corner_style:
