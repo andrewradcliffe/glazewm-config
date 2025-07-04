@@ -6,9 +6,8 @@
 
 i {
   /* color: rgb(115 130 175 / 95%); */
-  color: rgb(203 166 247 / 85%);
+  color: rgb(255 255 255 / 50%);
   margin-right: 7px;
-  font-size: 1.1em;
 }
 
 body {
@@ -36,7 +35,7 @@ body,
 #root {
   border-bottom: 1px solid rgb(17 17 27 / 5%);
   /* background: linear-gradient(rgb(0 0 0 / 90%), rgb(5 2 20 / 85%)); */
-  background: #181825;
+  background: #161616;
 }
 
 .app {
@@ -44,7 +43,7 @@ body,
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   height: 100%;
-  padding: 4px 1.5vw;
+  padding: 4px 0.75vw;
 }
 
 .left,
@@ -65,11 +64,15 @@ body,
 .logo,
 .media,
 .binding-mode,
-.tiling-direction,
-.paused-button,
+.tiling-direction {
+  margin-right: 20px;
+}
+
 .network,
 .memory,
 .cpu {
+  display: flex;
+  align-items: center;
   margin-right: 20px;
 }
 
@@ -81,11 +84,12 @@ body,
 .workspace {
   background: rgb(255 255 255 / 5%);
   margin-right: 4px;
-  padding: 4px 8px;
+  padding: 5px 9px;
   color: rgb(255 255 255 / 90%);
   border: none;
-  border-radius: 2px;
+  border-radius: 5px;
   cursor: pointer;
+  font-weight: bold;
 
   &.displayed {
     background: rgb(255 255 255 / 15%);
@@ -94,7 +98,7 @@ body,
   &.focused,
   &:hover {
     /* background: rgb(75 115 255 / 50%); */
-    background: rgb(203 166 247 / 50%);
+    background: rgb(255 255 255 / 35%);
   }
 }
 
@@ -104,10 +108,16 @@ body,
   background: rgb(255 255 255 / 15%);
   color: rgb(255 255 255 / 90%);
   border-radius: 2px;
-  line-height: 1;
+  /* line-height: 1; */
   padding: 4px 8px;
   border: 0;
   cursor: pointer;
+  font-weight: bold;
+}
+
+.paused-button {
+  padding: 5px 8px;
+  margin-right: 5px;
 }
 
 .binding-mode {
@@ -119,12 +129,10 @@ body,
 }
 
 .battery {
-  position: relative;
+  display: flex;
+  align-items: center;
 }
 
-.battery .charging-icon {
-  position: absolute;
-  font-size: 7px;
-  left: -8px;
-  top: 3px;
+.ph-fill {
+  font-size: 1.35em;
 }

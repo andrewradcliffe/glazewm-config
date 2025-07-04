@@ -9,6 +9,11 @@
     <link rel="stylesheet" type="text/css" href="./styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
     <!-- Allows React to be run buildless via "text/babel" script below. -->
     <script
@@ -81,14 +86,14 @@
         // Get icon to show for how much of the battery is charged.
         function getBatteryIcon(batteryOutput) {
           if (batteryOutput.chargePercent > 90)
-            return <i className="nf nf-fa-battery_4"></i>;
+            return <i class="ph-fill ph-battery-full"></i>;
           if (batteryOutput.chargePercent > 70)
-            return <i className="nf nf-fa-battery_3"></i>;
+            return <i class="ph-fill ph-battery-high"></i>;
           if (batteryOutput.chargePercent > 40)
-            return <i className="nf nf-fa-battery_2"></i>;
+            return <i class="ph-fill ph-battery-medium"></i>;
           if (batteryOutput.chargePercent > 20)
-            return <i className="nf nf-fa-battery_1"></i>;
-          return <i className="nf nf-fa-battery_0"></i>;
+            return <i class="ph-fill ph-battery-low"></i>;
+          return <i class="ph-fill ph-battery-empty"></i>;
         }
 
         // Get icon to show for current weather status.
@@ -171,7 +176,7 @@
                   ))}
 
                   <button
-                    className={`tiling-direction nf ${output.glazewm.tilingDirection === 'horizontal' ? 'nf-md-swap_horizontal' : 'nf-md-swap_vertical'}`}
+                    className={`tiling-direction ph-fill ${output.glazewm.tilingDirection === 'horizontal' ? 'ph-arrows-left-right' : 'ph-arrows-down-up'}`}
                     onClick={() =>
                       output.glazewm.runCommand('toggle-tiling-direction')
                     }
@@ -181,14 +186,14 @@
 
               {output.memory && (
                 <div className="memory">
-                  <i className="nf nf-fae-chip"></i>
+                  <i class="ph-fill ph-memory"></i>
                   {Math.round(output.memory.usage)}%
                 </div>
               )}
 
               {output.cpu && (
                 <div className="cpu">
-                  <i className="nf nf-oct-cpu"></i>
+                  <i className="ph-fill ph-cpu"></i>
 
                   {/* Change the text color if the CPU usage is high. */}
                   <span
@@ -203,7 +208,7 @@
                 <div className="battery">
                   {/* Show icon for whether battery is charging. */}
                   {output.battery.isCharging && (
-                    <i className="nf nf-md-power_plug charging-icon"></i>
+                    <i className="ph-fill ph-battery-charging"></i>
                   )}
                   {getBatteryIcon(output.battery)}
                   {Math.round(output.battery.chargePercent)}%
