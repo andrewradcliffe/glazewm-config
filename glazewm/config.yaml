@@ -123,8 +123,14 @@ window_behavior:
 
 workspaces:
   - name: '1'
+    # bind_to_monitor: 1
+    keep_alive: true
   - name: '2'
+    # bind_to_monitor: 0
+    keep_alive: true
   - name: '3'
+    # bind_to_monitor: 3
+    keep_alive: true
   - name: '4'
   - name: '5'
   - name: '6'
@@ -133,6 +139,16 @@ workspaces:
   - name: '9'
 
 window_rules:
+  - commands: ["move --workspace 1", "focus --workspace 1"]
+    match:
+      - window_process: { regex: "wezterm|windowsterminal" }
+  - commands: ["move --workspace 2", "focus --workspace 2"]
+    match:
+      - window_process: { regex: "msedge|chrome|chromium|firefox|zen"}
+  - commands: ["move --workspace 3", "focus --workspace 3"]
+    match:
+      - window_process: { regex: "olk|ms-teams"}
+
   - commands: ['ignore']
     match:
       # Ignores any Zebar windows.
@@ -150,6 +166,7 @@ window_rules:
       - window_process: { equals: 'Lively' }
         window_class: { regex: 'HwndWrapper' }
       - window_process: { equals: 'osu!' }
+      - window_process: { equals: 'RocketLeague'}
 
 binding_modes:
   # When enabled, the focused window can be resized via arrow keys or HJKL.
