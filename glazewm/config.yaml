@@ -276,6 +276,13 @@ keybindings:
   - commands: ['shell-exec wezterm-gui']
     bindings: ['alt+enter']
 
+  # Launch Browser
+  - commands: ['shell-exec %ProgramFiles%/Zen Browser/zen.exe']
+    bindings: ['alt+b']
+
+  - commands: ['shell-exec %LOCALAPPDATA%/Voidstar/FilePilot/FPilot.exe']
+    bindings: ['alt+e']
+
   # Focus the next/previous active workspace defined in `workspaces` config.
   - commands: ['focus --next-active-workspace']
     bindings: ['alt+s']
