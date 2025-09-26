@@ -277,7 +277,7 @@ keybindings:
     bindings: ['alt+enter']
 
   # Launch Browser
-  - commands: ['shell-exec %ProgramFiles%/Zen Browser/zen.exe']
+  - commands: ['shell-exec %ProgramFiles%/Mozilla Firefox/firefox.exe']
     bindings: ['alt+b']
 
   - commands: ['shell-exec %LOCALAPPDATA%/Voidstar/FilePilot/FPilot.exe']
