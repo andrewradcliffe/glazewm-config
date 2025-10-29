@@ -274,7 +274,7 @@ keybindings:
   # `shell-exec %ProgramFiles%/Git/git-bash.exe` to start Windows
   # Terminal and Git Bash respectively.
   - commands: ['shell-exec wezterm-gui']
-    bindings: ['alt+enter']
+    bindings: ['alt+space']
 
   # Launch Browser
   - commands: ['shell-exec %ProgramFiles%/Mozilla Firefox/firefox.exe']
