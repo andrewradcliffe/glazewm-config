@@ -114,7 +114,7 @@ window_behavior:
       centered: true
 
       # Whether to show floating windows as always on top.
-      shown_on_top: true
+      shown_on_top: false
 
     fullscreen:
       # Maximize the window if possible. If the window doesn't have a
@@ -150,7 +150,7 @@ window_rules:
       - window_process: { regex: "msedge|chrome|chromium|firefox|zen"}
   - commands: ["move --workspace 3", "focus --workspace 3"]
     match:
-      - window_process: { regex: "olk|ms-teams"}
+      - window_process: { regex: "olk|ms-teams|outlook"}
 
   - commands: ['ignore']
     match:
@@ -283,10 +283,11 @@ keybindings:
   # `shell-exec %ProgramFiles%/Git/git-bash.exe` to start Windows
   # Terminal and Git Bash respectively.
   - commands: ['shell-exec wezterm-gui']
-    bindings: ['alt+space']
+    bindings: ['alt+shift+t']
 
   # Launch Browser
-  - commands: ['shell-exec %ProgramFiles%/Mozilla Firefox/firefox.exe']
+  # - commands: ['shell-exec %ProgramFiles%/Mozilla Firefox/firefox.exe']
+  - commands: ['shell-exec %ProgramFiles%/Zen Browser/zen.exe']
     bindings: ['alt+b']
 
   - commands: ['shell-exec %LOCALAPPDATA%/Voidstar/FilePilot/FPilot.exe']
