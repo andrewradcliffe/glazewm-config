@@ -150,8 +150,6 @@
               )}
             </div>
 
-            <div className="center">{output.date?.formatted}</div>
-
             <div className="right">
               {output.glazewm && (
                 <>
@@ -212,6 +210,10 @@
                   {Math.round(output.battery.chargePercent)}%
                 </div>
               )}
+
+              <div className="datetime">
+                {output.date?.formatted}
+              </div>
             </div>
           </div>
         );

@@ -40,7 +40,7 @@ body,
 
 .app {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr auto;
   align-items: center;
   height: 100%;
   padding: 4px 0.75vw;
@@ -70,7 +70,8 @@ body,
 
 .network,
 .memory,
-.cpu {
+.cpu,
+.battery {
   display: flex;
   align-items: center;
   margin-right: 20px;
@@ -128,9 +129,9 @@ body,
   color: #900029;
 }
 
-.battery {
+.datetime {
   display: flex;
-  align-items: center;
+  align-items: right;
 }
 
 .ph-fill {
